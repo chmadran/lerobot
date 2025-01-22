@@ -66,6 +66,8 @@ def log_control_info(robot: Robot, dt_s, episode_index=None, frame_index=None, f
             if key in robot.logs:
                 log_dt(f"dtR{name}", robot.logs[key])
 
+    info_str = " ".join(log_items)
+    logging.info(info_str)
 
 
 @cache
